@@ -1,4 +1,4 @@
-![banner](images/banner.JPEG)
+![banner](images/IMG_1819(1).JPEG)
 
 <!--
 **gavanlamb/gavanlamb** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
