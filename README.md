@@ -1,6 +1,7 @@
 ![banner](images/IMG_1819(1).JPEG)
 
-[![wakatime](https://wakatime.com/badge/user/6607b7a9-a77d-4dd0-a00f-db69cef9c5d1.svg)](https://wakatime.com/@6607b7a9-a77d-4dd0-a00f-db69cef9c5d1)
+![](https://komarev.com/ghpvc/?username=gavanlamb&color=brightgreen)  
+[![wakatime](https://wakatime.com/badge/user/6607b7a9-a77d-4dd0-a00f-db69cef9c5d1.svg)](https://wakatime.com/@6607b7a9-a77d-4dd0-a00f-db69cef9c5d1)  
 <!--
 **gavanlamb/gavanlamb** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
