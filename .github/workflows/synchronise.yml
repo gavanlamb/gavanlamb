@@ -27,5 +27,5 @@ jobs:
       - name: Run sync script
         run: python src/scripts/sync_followers.py
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT_TOKEN }}
           EXCLUDED_ACCOUNTS: 'cupel-co,fekberg,luke-lewandowski,timker,wakatime,jbogard,mcollina,richardszalay,aheinze'
