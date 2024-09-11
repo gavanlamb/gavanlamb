@@ -19,23 +19,35 @@ headers = {
     'Accept': 'application/vnd.github.v3+json'
 }
 
+def get_paginated_results(url):
+    """Fetch paginated results from a GitHub API endpoint."""
+    results = []
+    page = 1
+    per_page = 100  # Maximum results per page
+
+    while True:
+        response = requests.get(url, headers=headers, params={'page': page, 'per_page': per_page})
+        if response.status_code == 200:
+            data = response.json()
+            if not data:  # If no data is returned, break the loop
+                break
+            results.extend(data)
+            page += 1
+        else:
+            print(f"Error fetching data from {url}: {response.status_code}")
+            break
+
+    return results
+
 def get_followers():
-    """Get the list of users following you."""
-    response = requests.get(FOLLOWERS_URL, headers=headers)
-    if response.status_code == 200:
-        return [user['login'] for user in response.json()]
-    else:
-        print(f"Error fetching followers: {response.status_code}")
-        return []
+    """Get the list of users following you using pagination."""
+    print("Fetching followers...")
+    return [user['login'] for user in get_paginated_results(FOLLOWERS_URL)]
 
 def get_following():
-    """Get the list of users you are following."""
-    response = requests.get(FOLLOWING_URL, headers=headers)
-    if response.status_code == 200:
-        return [user['login'] for user in response.json()]
-    else:
-        print(f"Error fetching following: {response.status_code}")
-        return []
+    """Get the list of users you are following using pagination."""
+    print("Fetching following...")
+    return [user['login'] for user in get_paginated_results(FOLLOWING_URL)]
 
 def follow_user(username):
     """Follow a user on GitHub."""
