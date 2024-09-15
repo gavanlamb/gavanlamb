@@ -28,4 +28,4 @@ jobs:
         run: python src/scripts/sync_followers.py
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT_TOKEN }}
-          EXCLUDED_ACCOUNTS: 'cupel-co,fekberg,luke-lewandowski,timker,wakatime,jbogard,mcollina,richardszalay,aheinze,chesslablab'
+          EXCLUDED_ACCOUNTS: 'cupel-co,fekberg,luke-lewandowski,timker,wakatime,jbogard,mcollina,richardszalay,aheinze,chesslablab,deeligence'
